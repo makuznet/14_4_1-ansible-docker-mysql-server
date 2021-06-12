@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  gather_facts: true
+  become: true
+  tasks:
+  - name: Install Docker
+  apt:
+    update_cache: true
+    name: docker.io
+    state: present
+    enabled: true

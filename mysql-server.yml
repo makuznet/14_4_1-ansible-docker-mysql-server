@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  gather_facts: true
+  become: true
+  tasks:
+  - name: Install mysql-server
+  apt:
+    update_cache: true
+    name: mysql-server
+    deb: https://dev.mysql.com/get/mysql-apt-config_0.8.17-1_all.deb
+    state: started # present
+    enabled: true

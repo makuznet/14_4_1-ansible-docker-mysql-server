@@ -2,7 +2,7 @@
 all:
   hosts:
   children:
-    k8:
+    ya:
       hosts:
     %{for num in drop_num~}
       ${drop_ip[num]}:

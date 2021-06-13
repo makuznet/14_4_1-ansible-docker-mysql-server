@@ -1,4 +1,4 @@
-# Ansible tasks apt
+# Ansible playbook examples
 > This repo comprises two examples of Ansible playbooks:
 1. Installing Docker app.
 2. Installing MySQL-Server app.

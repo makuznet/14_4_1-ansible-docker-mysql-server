@@ -1,0 +1,9 @@
+---
+all:
+  hosts:
+  children:
+    k8:
+      hosts:
+          178.154.226.148:
+            ansible_user: makuznet
+    

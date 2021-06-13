@@ -1,11 +1,15 @@
 ---
-- hosts: localhost
+- hosts: all # localhost
   gather_facts: true
   become: true
   tasks:
-  - name: Install Docker
-  apt:
-    update_cache: true
-    name: docker.io
-    state: present
-    enabled: true
+    - name: Install Docker
+      apt:
+        update_cache: true
+        name: docker.io
+        state: present
+
+    - name: Enable docker service
+      service:
+        name: docker
+        enabled: true
